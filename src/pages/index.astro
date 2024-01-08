@@ -4,17 +4,19 @@ import Card from '../components/Card.astro';
 import {Linkedin} from "lucide-astro";
 import {Github} from "lucide-astro";
 import {File} from "lucide-astro";
+import {Menu} from "lucide-astro";
+import {X} from "lucide-astro";
 ---
 
 <Layout title="Nassim LOUNADI">
     <main>
         <section id="main" class="h-screen">
             <section id="navbar" class="fixed top-0 w-full bg-neutral-900/50 backdrop-blur-2xl z-20">
-                <div class="w-full px-96 py-6 border-b border-neutral-200 dark:border-neutral-700 flex justify-between items-center">
+                <div class="w-full px-6 lg:px-96 py-6 border-b border-neutral-200 dark:border-neutral-700 flex justify-between items-center">
                     <h4 class="text-xl">
                         <a href="#" class="font-bold text-neutral-900 dark:text-neutral-100">Nassim LOUNADI</a>
                     </h4>
-                    <div class="flex space-x-4">
+                    <div class="hidden lg:flex space-x-4">
                         <a href="#about-me"
                            class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                         >About me</a>
@@ -25,11 +27,29 @@ import {File} from "lucide-astro";
                            class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                         >Contact</a>
                     </div>
+                    <div class="flex lg:hidden" id="mobile-menu-button">
+                        <Menu class="h-6 w-6" />
+                    </div>
+                    <div class="hidden absolute top-0 left-0 h-screen w-full z-30 bg-neutral-900 flex flex-col justify-center items-center gap-8" id="mobile-menu">
+                        <div class="absolute top-0 right-0 mt-6 mr-6 p-1" id="mobile-menu-close">
+                            <X class="h-6 w-6" />
+                        </div>
+                        <a href="#about-me"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >About me
+                        </a>
+                        <a href="#projects"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >Projects</a>
+                        <a href="#contact"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >Contact</a>
+                    </div>
                 </div>
             </section>
 
             <section id="header">
-                <div>
+                <div class="flex flex-col w-full justify-center">
                     <img src="/memoji_header.png" alt="Technologist emoji" class="w-72 h-72 mx-auto mt-32"/>
                     <h1 class="text-center text-4xl font-bold mt-2">Nassim LOUNADI</h1>
                     <p class="text-center text-lg text-neutral-600 dark:text-neutral-400">Développeur full-stack</p>
@@ -38,16 +58,16 @@ import {File} from "lucide-astro";
                        class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-white dark:text-neutral-100 bg-indigo-500 hover:bg-indigo-600"
                     >En savoir plus</a>
 
-                    <a href="#about-me" class="block mx-auto w-fit mt-72 animate-bounce">↓ Scroll ↓</a>
+                    <a href="#about-me" class="block mx-auto w-fit mt-40 lg:mt-72 animate-bounce">↓ Scroll ↓</a>
                 </div>
             </section>
         </section>
 
         <section id="about-me">
-            <div class="h-screen px-96 py-48">
+            <div class="h-screen px-6 lg:px-96 py-24 lg:py-48">
                 <h1 class="text-3xl font-bold">Qui suis-je ?</h1>
 
-                <div class="flex items-center justify-between">
+                <div class="lg:flex items-center justify-between">
                     <div>
                         <p class="mt-8 text-neutral-600 dark:text-neutral-400">
                             Je suis un développeur full-stack passionné par le développement web et mobile.
@@ -60,7 +80,7 @@ import {File} from "lucide-astro";
                             Je suis à la recherche d'un stage de 8 à 12 semaines à partir du 15 avril 2024.
                         </p>
                     </div>
-                    <img src="/memoji_aboutme.png" alt="Memoji" class="w-72 h-72 ml-24"/>
+                    <img src="/memoji_aboutme.png" alt="Memoji" class="w-72 h-72 lg:ml-24"/>
                 </div>
 
                 <div class="flex">
@@ -88,10 +108,10 @@ import {File} from "lucide-astro";
         </section>
 
         <section id="projects">
-            <div class="h-screen px-96 py-48">
+            <div class="h-fit px-6 lg:px-96 py-24 lg:py-48">
                 <h1 class="text-3xl font-bold">Mes projets</h1>
 
-                <div class="grid grid-cols-3 gap-8 mt-16">
+                <div class="flex flex-col lg:flex-row gap-8 mt-8 lg:mt-16 lg:space-y-0">
                     <Card
                             title="Portfolio"
                             description="Mon portfolio, développé avec Astro et TailwindCSS."
@@ -144,7 +164,7 @@ import {File} from "lucide-astro";
         </section>
 
         <section id="contact">
-            <div class="h-screen px-96 py-48">
+            <div class="h-screen px-6 lg:px-96 py-24 lg:py-48">
                 <h1 class="text-3xl font-bold">Me contacter</h1>
 
                 <form id="contact-form">
@@ -175,7 +195,7 @@ import {File} from "lucide-astro";
         </section>
     </main>
     <footer>
-        <div class="border-t border-neutral-600 px-48 py-6 text-neutral-500 text-sm">
+        <div class="border-t border-neutral-600 px-6 lg:px-48 py-6 text-neutral-500 text-sm">
             <p>
                 © Nassim LOUNADI <span id="year"></span> - Tous droits réservés
             </p>
@@ -199,6 +219,28 @@ import {File} from "lucide-astro";
         });
         project.addEventListener('click', () => {
             modal.classList.toggle('hidden');
+            document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
+        });
+    }
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMobileMenuButton = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
+    });
+
+    closeMobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
+    });
+
+    const mobileMenuButtons = document.querySelectorAll('.mobile-menu-buttons');
+    for (const mobileMenuButton of mobileMenuButtons) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
             document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
         });
     }
