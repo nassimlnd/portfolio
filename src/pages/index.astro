@@ -115,7 +115,11 @@ import {X} from "lucide-astro";
                     <Card
                             title="Portfolio"
                             description="Mon portfolio, développé avec Astro et TailwindCSS."
-                            fullDescription="Mon portfolio, développé avec Astro et TailwindCSS. Il est hébergé sur Vercel."
+                            fullDescription={
+                                "Mon portfolio, développé avec Astro et TailwindCSS. " +
+                                "J'ai décidé de développer mon portfolio avec Astro et TailwindCSS pour apprendre de nouvelles technologies. " +
+                                "Astro est un framework qui permet de créer des sites web statiques et dynamiques. Il permet de créer des sites web performants et accessibles. "
+                            }
                             tags={['Astro', 'TypeScript', 'TailwindCSS']}
                             date="Janvier 2024"
                             state="En cours"
@@ -129,11 +133,19 @@ import {X} from "lucide-astro";
                                     href: '#'
                                 }
                             ]}
+                            screenshots={
+                                ['/portfolio_screenshots/screenshot1.png', '/portfolio_screenshots/screenshot2.png', '/portfolio_screenshots/screenshot3.png', '/portfolio_screenshots/screenshot4.png']
+                            }
                     />
                     <Card
                             title="NasThreads"
                             description="Un réseau social sur le principe de Twitter"
-                            fullDescription=""
+                            fullDescription={
+                                "NasThreads est un réseau social sur le principe de Twitter. " +
+                                "Il permet de partager des messages courts avec ses abonnés. " +
+                                "Le projet a été développé à l'aide de NextJS, Prisma, TypeScript et TailwindCSS." +
+                                "<br><br>Le projet a été réalisé pour apprendre à utiliser NextJS et Prisma. Et pour réaliser un projet complet avec beaucoup de fonctionnalités"
+                            }
                             tags={['NextJS', 'Prisma', 'TypeScript', 'TailwindCSS']}
                             date="Janvier 2024"
                             state="En cours"
@@ -147,11 +159,16 @@ import {X} from "lucide-astro";
                                     href: 'https://www.threads.nassimlounadi.me/'
                                 }
                             ]}
+                            screenshots={
+                                ['/nasthreads_screenshots/screenshot1.png', '/nasthreads_screenshots/screenshot2.png']
+                            }
                     />
                     <Card
                             title="Facturéo"
                             description="Un logiciel de facturation pour les entrepreneurs"
-                            fullDescription="Dans le cadre d'un projet de fin de semestre, il a été demander de mettre en place une application Symfony. J'ai donc décidé de créer un logiciel de facturation pour les entrepreneurs. Facturéo est une application de facturation complète qui facilite la création, la gestion et l'envoi de factures professionnelles. Elle offre une gamme de fonctionnalités pour aider les utilisateurs à gérer efficacement leur processus de facturation. Le projet a été développé à l'aide de Symfony, MySQL et TailwindCSS."
+                            fullDescription={
+                                "Dans le cadre d'un projet de fin de semestre, il a été demander de mettre en place une application Symfony. J'ai donc décidé de créer un logiciel de facturation pour les entrepreneurs. <br><br>Facturéo est une application de facturation complète qui facilite la création, la gestion et l'envoi de factures professionnelles. Elle offre une gamme de fonctionnalités pour aider les utilisateurs à gérer efficacement leur processus de facturation. <br><br>Le projet a été développé à l'aide de Symfony, MySQL et TailwindCSS."
+                            }
                             tags={['Symfony', 'PHP', 'MySQL', 'TailwindCSS']}
                             date="Décembre 2023"
                             state="En pause"
@@ -167,7 +184,7 @@ import {X} from "lucide-astro";
             <div class="h-screen px-6 lg:px-96 py-24 lg:py-48">
                 <h1 class="text-3xl font-bold">Me contacter</h1>
 
-                <form id="contact-form">
+                <form id="contact-form" method="post" >
                     <div class="mt-8">
                         <label for="name" class="block text-neutral-400">Nom</label>
                         <input type="text" id="name" name="name"

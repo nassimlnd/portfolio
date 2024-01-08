@@ -31,4 +31,25 @@ const { title } = Astro.props;
 		font-family: "JetBrains Mono", monospace;
 		height: 100%;
 	}
+
+	/* width */
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: @apply bg-neutral-900;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #525252;
+		border-radius: @apply rounded;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #404040;
+	}
 </style>
