@@ -1,0 +1,205 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import {Linkedin} from "lucide-astro";
+import {Github} from "lucide-astro";
+import {File} from "lucide-astro";
+---
+
+<Layout title="Nassim LOUNADI">
+    <main>
+        <section id="main" class="h-screen">
+            <section id="navbar" class="fixed top-0 w-full bg-neutral-900/50 backdrop-blur-2xl z-20">
+                <div class="w-full px-96 py-6 border-b border-neutral-200 dark:border-neutral-700 flex justify-between items-center">
+                    <h4 class="text-xl">
+                        <a href="#" class="font-bold text-neutral-900 dark:text-neutral-100">Nassim LOUNADI</a>
+                    </h4>
+                    <div class="flex space-x-4">
+                        <a href="#about-me"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >About me</a>
+                        <a href="#projects"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >Projects</a>
+                        <a href="#contact"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        >Contact</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="header">
+                <div>
+                    <img src="/memoji_header.png" alt="Technologist emoji" class="w-72 h-72 mx-auto mt-32"/>
+                    <h1 class="text-center text-4xl font-bold mt-2">Nassim LOUNADI</h1>
+                    <p class="text-center text-lg text-neutral-600 dark:text-neutral-400">Développeur full-stack</p>
+
+                    <a href="#about-me"
+                       class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-white dark:text-neutral-100 bg-indigo-500 hover:bg-indigo-600"
+                    >En savoir plus</a>
+
+                    <a href="#about-me" class="block mx-auto w-fit mt-72 animate-bounce">↓ Scroll ↓</a>
+                </div>
+            </section>
+        </section>
+
+        <section id="about-me">
+            <div class="h-screen px-96 py-48">
+                <h1 class="text-3xl font-bold">Qui suis-je ?</h1>
+
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="mt-8 text-neutral-600 dark:text-neutral-400">
+                            Je suis un développeur full-stack passionné par le développement web et mobile.
+                            J'aime apprendre de nouvelles technologies et les mettre en pratique dans des projets
+                            personnels.
+                        </p>
+
+                        <p class="mt-8 text-neutral-600 dark:text-neutral-400">
+                            Je suis actuellement en 3ème année de Licence Informatique à l'Université de Tours.
+                            Je suis à la recherche d'un stage de 8 à 12 semaines à partir du 15 avril 2024.
+                        </p>
+                    </div>
+                    <img src="/memoji_aboutme.png" alt="Memoji" class="w-72 h-72 ml-24"/>
+                </div>
+
+                <div class="flex">
+                    <a href="https://www.linkedin.com/in/nassimlounadi/" target="_blank"
+                       class="flex items-center w-fit mt-8 px-4 py-2 rounded-md text-sm font-medium text-indigo-500 hover:bg-neutral-800"
+                    >
+                        <Linkedin class="inline-block w-5 h-5 mr-2"/>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/nassimlnd/" target="_blank"
+                       class="flex items-center w-fit mt-8 px-4 py-2 rounded-md text-sm font-medium text-indigo-500 hover:bg-neutral-800"
+                    >
+                        <Github class="inline-block w-5 h-5 mr-2"/>
+                        GitHub
+                    </a>
+                    <a href="/CV_Nassim_LOUNADI.pdf" target="_blank"
+                       class="flex items-center w-fit mt-8 px-4 py-2 rounded-md text-sm font-medium text-indigo-500 hover:bg-neutral-800"
+                    >
+                        <File class="inline-block w-5 h-5 mr-2"/>
+                        CV
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="h-screen px-96 py-48">
+                <h1 class="text-3xl font-bold">Mes projets</h1>
+
+                <div class="grid grid-cols-3 gap-8 mt-16">
+                    <Card
+                            title="Portfolio"
+                            description="Mon portfolio, développé avec Astro et TailwindCSS."
+                            longdescription="Mon portfolio, développé avec Astro et TailwindCSS. Il est hébergé sur Vercel."
+                            tags={['Astro', 'TypeScript', 'TailwindCSS']}
+                            date="Janvier 2024"
+                            state="En cours"
+                            links={[
+                                {
+                                    name: 'GitHub',
+                                    href: '#'
+                                },
+                                {
+                                    name: 'Demo',
+                                    href: '#'
+                                }
+                            ]}
+                    />
+                    <Card
+                            title="NasThreads"
+                            description="Un réseau social sur le principe de Twitter"
+                            long
+                            tags={['NextJS', 'Prisma', 'TypeScript', 'TailwindCSS']}
+                            date="Janvier 2024"
+                            state="En cours"
+                            links={[
+                                {
+                                    name: 'GitHub',
+                                    href: '#'
+                                },
+                                {
+                                    name: 'Demo',
+                                    href: 'https://www.threads.nassimlounadi.me/'
+                                }
+                            ]}
+                    />
+                    <Card
+                            title="Facturéo"
+                            description="Un logiciel de facturation pour les entrepreneurs"
+                            longdescription="Dans le cadre d'un projet de fin de semestre, il a été demander de mettre en place une application Symfony. J'ai donc décidé de créer un logiciel de facturation pour les entrepreneurs. Facturéo est une application de facturation complète qui facilite la création, la gestion et l'envoi de factures professionnelles. Elle offre une gamme de fonctionnalités pour aider les utilisateurs à gérer efficacement leur processus de facturation. Le projet a été développé à l'aide de Symfony, MySQL et TailwindCSS."
+                            tags={['Symfony', 'PHP', 'MySQL', 'TailwindCSS']}
+                            date="Décembre 2023"
+                            state="En pause"
+                            links={
+                                []
+                            }
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="h-screen px-96 py-48">
+                <h1 class="text-3xl font-bold">Me contacter</h1>
+
+                <form id="contact-form">
+                    <div class="mt-8">
+                        <label for="name" class="block text-neutral-600 dark:text-neutral-400">Nom</label>
+                        <input type="text" id="name" name="name"
+                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"/>
+                    </div>
+
+                    <div class="mt-8">
+                        <label for="email" class="block text-neutral-600 dark:text-neutral-400">E-mail</label>
+                        <input type="email" id="email" name="email"
+                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"/>
+                    </div>
+
+                    <div class="mt-8">
+                        <label for="message" class="block text-neutral-600 dark:text-neutral-400">Message</label>
+                        <textarea id="message" name="message"
+                                  class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-white dark:text-neutral-100 bg-indigo-500 hover:bg-indigo-600">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="border-t border-neutral-600 px-48 py-6 text-neutral-500 text-sm">
+            <p>
+                © Nassim LOUNADI <span id="year"></span> - Tous droits réservés
+            </p>
+        </div>
+    </footer>
+</Layout>
+
+<script type="text/javascript">
+    const year = new Date().getFullYear();
+    document.querySelector('#year').textContent = year;
+
+
+    const projects = document.querySelectorAll('.project');
+    for (const project of projects) {
+        console.log(project.dataset.modalid);
+        const modal = document.querySelector(`#${project.dataset.modalid}`)
+        const close = document.getElementById(modal.dataset.closeid);
+        close.addEventListener('click', () => {
+            modal.classList.toggle('hidden');
+            document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
+        });
+        project.addEventListener('click', () => {
+            modal.classList.toggle('hidden');
+            document.getElementsByTagName('html')[0].classList.toggle('overflow-hidden')
+        });
+    }
+</script>
