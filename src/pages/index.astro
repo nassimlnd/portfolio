@@ -12,19 +12,19 @@ import {X} from "lucide-astro";
     <main>
         <section id="main" class="h-screen">
             <section id="navbar" class="fixed top-0 w-full bg-neutral-900/50 backdrop-blur-2xl z-20">
-                <div class="w-full px-6 lg:px-96 py-6 border-b border-neutral-200 dark:border-neutral-700 flex justify-between items-center">
+                <div class="w-full px-6 lg:px-96 py-6 border-b border-neutral-700 flex justify-between items-center">
                     <h4 class="text-xl">
-                        <a href="#" class="font-bold text-neutral-900 dark:text-neutral-100">Nassim LOUNADI</a>
+                        <a href="#" class="font-bold text-neutral-100">Nassim LOUNADI</a>
                     </h4>
                     <div class="hidden lg:flex space-x-4">
                         <a href="#about-me"
-                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-100 hover:bg-neutral-800"
                         >About me</a>
                         <a href="#projects"
-                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-100 hover:bg-neutral-800"
                         >Projects</a>
                         <a href="#contact"
-                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="block px-4 py-2 rounded-md text-sm font-medium text-neutral-100 hover:bg-neutral-800"
                         >Contact</a>
                     </div>
                     <div class="flex lg:hidden" id="mobile-menu-button">
@@ -35,14 +35,14 @@ import {X} from "lucide-astro";
                             <X class="h-6 w-6" />
                         </div>
                         <a href="#about-me"
-                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-100 hover:bg-neutral-800"
                         >About me
                         </a>
                         <a href="#projects"
-                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-100 hover:bg-neutral-800"
                         >Projects</a>
                         <a href="#contact"
-                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-900 dark:text-neutral-100 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                           class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-100 hover:bg-neutral-800"
                         >Contact</a>
                     </div>
                 </div>
@@ -52,10 +52,10 @@ import {X} from "lucide-astro";
                 <div class="flex flex-col w-full justify-center">
                     <img src="/memoji_header.png" alt="Technologist emoji" class="w-72 h-72 mx-auto mt-32"/>
                     <h1 class="text-center text-4xl font-bold mt-2">Nassim LOUNADI</h1>
-                    <p class="text-center text-lg text-neutral-600 dark:text-neutral-400">Développeur full-stack</p>
+                    <p class="text-center text-lg text-neutral-400">Développeur full-stack</p>
 
                     <a href="#about-me"
-                       class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-white dark:text-neutral-100 bg-indigo-500 hover:bg-indigo-600"
+                       class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-neutral-100 bg-indigo-500 hover:bg-indigo-600"
                     >En savoir plus</a>
 
                     <a href="#about-me" class="block mx-auto w-fit mt-40 lg:mt-72 animate-bounce">↓ Scroll ↓</a>
@@ -69,13 +69,13 @@ import {X} from "lucide-astro";
 
                 <div class="lg:flex items-center justify-between">
                     <div>
-                        <p class="mt-8 text-neutral-600 dark:text-neutral-400">
+                        <p class="mt-8 text-neutral-400">
                             Je suis un développeur full-stack passionné par le développement web et mobile.
                             J'aime apprendre de nouvelles technologies et les mettre en pratique dans des projets
                             personnels.
                         </p>
 
-                        <p class="mt-8 text-neutral-600 dark:text-neutral-400">
+                        <p class="mt-8 text-neutral-400">
                             Je suis actuellement en 3ème année de Licence Informatique à l'Université de Tours.
                             Je suis à la recherche d'un stage de 8 à 12 semaines à partir du 15 avril 2024.
                         </p>
@@ -169,25 +169,25 @@ import {X} from "lucide-astro";
 
                 <form id="contact-form">
                     <div class="mt-8">
-                        <label for="name" class="block text-neutral-600 dark:text-neutral-400">Nom</label>
+                        <label for="name" class="block text-neutral-400">Nom</label>
                         <input type="text" id="name" name="name"
-                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"/>
+                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-800 text-neutral-100"/>
                     </div>
 
                     <div class="mt-8">
-                        <label for="email" class="block text-neutral-600 dark:text-neutral-400">E-mail</label>
+                        <label for="email" class="block text-neutral-400">E-mail</label>
                         <input type="email" id="email" name="email"
-                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"/>
+                               class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-800 text-neutral-100"/>
                     </div>
 
                     <div class="mt-8">
-                        <label for="message" class="block text-neutral-600 dark:text-neutral-400">Message</label>
+                        <label for="message" class="block text-neutral-400">Message</label>
                         <textarea id="message" name="message"
-                                  class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"></textarea>
+                                  class="w-full mt-2 px-4 py-2 rounded-md border border-neutral-700 bg-neutral-800 text-neutral-100"></textarea>
                     </div>
 
                     <button type="submit"
-                            class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-white dark:text-neutral-100 bg-indigo-500 hover:bg-indigo-600">
+                            class="block w-fit mx-auto mt-8 px-4 py-2 rounded-md text-sm font-medium text-neutral-100 bg-indigo-500 hover:bg-indigo-600">
                         Envoyer
                     </button>
                 </form>
