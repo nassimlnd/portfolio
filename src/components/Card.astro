@@ -1,18 +1,17 @@
 ---
 import {X} from "lucide-astro";
-import {Github} from "lucide-astro";
 
 interface Props {
     title: string;
     date: string;
     description: string;
-    longdescription: string;
+    fullDescription: string;
     tags: string[];
-    links: any;
+    links : any[];
     state: string;
 }
 
-const {links, title, date, description, tags, state, longdescription} = Astro.props;
+const {links, title, date, description, tags, state, fullDescription} = Astro.props;
 ---
 
 <div id=`project-${title}`
@@ -60,7 +59,7 @@ const {links, title, date, description, tags, state, longdescription} = Astro.pr
                 <div class="border-b border-neutral-600 pb-2">
                     <h4 class="text-xl font-semibold">Description</h4>
                 </div>
-                <p class="text-neutral-400 mt-6">{longdescription}</p>
+                <p class="text-neutral-400 mt-6">{fullDescription}</p>
             </div>
             <div>
                 <div class="border-b border-neutral-600 pb-2">
@@ -69,7 +68,7 @@ const {links, title, date, description, tags, state, longdescription} = Astro.pr
             </div>
         </div>
         <div class="flex px-6 py-4 border-t border-neutral-600">
-            {links.map((link) =>
+            {links.map((link : any) =>
                     <a href=`${link.href}` class="block w-fit hover:bg-neutral-700 text-indigo-500 py-2 px-4 rounded-md">
                         {link.name}
                     </a>
