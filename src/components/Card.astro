@@ -63,10 +63,11 @@ const {links, title, date, description, tags, state, fullDescription, screenshot
                 <div class="text-neutral-400 mt-6" set:html={fullDescription}></div>
             </div>
             <div>
-                <div class="border-b border-neutral-600 pb-2">
-                    <h4 class="text-xl font-semibold">Screenshots</h4>
-                </div>
-                {screenshots &&
+                {screenshots && screenshots.length >= 1 &&
+                        <div class="border-b border-neutral-600 pb-2">
+                            <h4 class="text-xl font-semibold">Screenshots</h4>
+                        </div>
+
                         <div class="flex flex-col gap-4 mt-6">
                             {screenshots.map((screenshot) =>
                                     <img src=`${screenshot}`
@@ -78,7 +79,7 @@ const {links, title, date, description, tags, state, fullDescription, screenshot
                 }
             </div>
         </div>
-        {links.length > 1 &&
+        {links.length >= 1 &&
                 <div class="flex px-6 py-4 border-t border-neutral-600">
                     {links.map((link: any) =>
                             <a href=`${link.href}`

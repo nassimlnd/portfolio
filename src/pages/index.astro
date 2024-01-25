@@ -28,11 +28,12 @@ import {X} from "lucide-astro";
                         >Contact</a>
                     </div>
                     <div class="flex lg:hidden" id="mobile-menu-button">
-                        <Menu class="h-6 w-6" />
+                        <Menu class="h-6 w-6"/>
                     </div>
-                    <div class="hidden absolute top-0 left-0 h-screen w-full z-30 bg-neutral-900 flex flex-col justify-center items-center gap-8" id="mobile-menu">
+                    <div class="hidden absolute top-0 left-0 h-screen w-full z-30 bg-neutral-900 flex flex-col justify-center items-center gap-8"
+                         id="mobile-menu">
                         <div class="absolute top-0 right-0 mt-6 mr-6 p-1" id="mobile-menu-close">
-                            <X class="h-6 w-6" />
+                            <X class="h-6 w-6"/>
                         </div>
                         <a href="#about-me"
                            class="mobile-menu-buttons block px-4 py-2 rounded-md text-xl font-semibold text-neutral-100 hover:bg-neutral-800"
@@ -126,11 +127,11 @@ import {X} from "lucide-astro";
                             links={[
                                 {
                                     name: 'GitHub',
-                                    href: '#'
+                                    href: 'https://github.com/nassimlnd/portfolio'
                                 },
                                 {
                                     name: 'Demo',
-                                    href: '#'
+                                    href: 'https://nassimlounadi.fr/'
                                 }
                             ]}
                             screenshots={
@@ -152,7 +153,7 @@ import {X} from "lucide-astro";
                             links={[
                                 {
                                     name: 'GitHub',
-                                    href: '#'
+                                    href: 'https://github.com/nassimlnd/nasthreads'
                                 },
                                 {
                                     name: 'Demo',
@@ -173,6 +174,204 @@ import {X} from "lucide-astro";
                             date="Décembre 2023"
                             state="En pause"
                             links={
+                                [
+                                    {
+                                        name: 'GitHub',
+                                        href: 'https://github.com/nassimlnd/factureo'
+                                    }
+                                ]
+                            }
+                            screenshots={
+                                [
+                                    '/factureo_screenshots/screenshot1.png',
+                                    '/factureo_screenshots/screenshot2.png',
+                                    '/factureo_screenshots/screenshot3.png',
+                                    '/factureo_screenshots/screenshot4.png',
+                                    '/factureo_screenshots/screenshot5.png',
+                                    '/factureo_screenshots/screenshot6.png',
+                                    '/factureo_screenshots/screenshot7.png',
+                                ]
+                            }
+                    />
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8 mt-8 lg:mt-16 lg:space-y-0">
+                    <Card
+                            title="CircuitsCourts"
+                            description="Application de gestion et de visualisation de tournées de livraison"
+                            fullDescription={
+                                "Dans le cadre du projet de fin semestre 4 de Licence Informatique" +
+                                "Nous avions comme mission de réaliser une application de gestion et de visualisation de tournées de livraisons." +
+                                "<br><br>Le projet avait comme contrainte de réaliser le projet en Java et d'utiliser JavaFX pour l'interface graphique." +
+                                ""
+                            }
+                            tags={['Java', 'JavaFX', 'MySQL', 'FXML']}
+                            date="Décembre 2022"
+                            state="Terminé"
+                            links={[
+                                {
+                                    name: 'GitHub',
+                                    href: 'https://github.com/nassimlnd/CircuitsCourtsJava'
+                                }
+                            ]}
+                            screenshots={
+                                [
+                                    '/circuitscourts_screenshots/screenshot1.png',
+                                    '/circuitscourts_screenshots/screenshot2.png',
+                                    '/circuitscourts_screenshots/screenshot3.png',
+                                    '/circuitscourts_screenshots/screenshot4.png',
+                                    '/circuitscourts_screenshots/screenshot5.png',
+                                    '/circuitscourts_screenshots/screenshot6.png',
+                                    '/circuitscourts_screenshots/screenshot7.png',
+                                    '/circuitscourts_screenshots/screenshot8.png',
+                                ]
+                            }
+                    />
+                    <Card
+                            title="EcoCircuits"
+                            description="Une application web de gestion et de visualisation de tournées de livraison."
+                            fullDescription={
+                                "EcoCircuits est une application web de gestion et de visualisation de tournées de livraison. " +
+                                "Ce projet a été réaliser dans le cadre d'un stage volontaire dans le Laboratoire d'Informatique Fondamentale et Appliquée de Tours. " +
+                                "Le projet a été développé à l'aide de <span class='font-semibold text-white'>React</span>, <span class='font-semibold text-white'>JavaScript</span> et <span class='font-semibold text-white'>TailwindCSS</span>." +
+                                "<br><br>Le projet fait appel à une API Rest développée spécialement pour le projet en Java avec Spring. " +
+                                "L'API permet de gérer les utilisateurs, les tournées, les clients et les produits. " +
+                                "Elle permet aussi de générer des tournées de livraison à l'aide d'un algorithme fait à partir d'un modèle mathématique fait en collaboration avec les chercheurs du labo. " +
+                                "<br><br>Le projet a également été réalisé en collaboration avec la plateforme de livraison de produits locaux, <span class='font-semibold text-white'>Manger Bio Centre Val de Loire</span>." +
+                                "<br><br>Le projet est actuellement en pause. Mais il sera repris par les chercheurs du laboratoire dans le cadre d'un projet de recherche."
+                            }
+                            tags={['React', 'Javascript', 'TailwindCSS']}
+                            date="Mai 2023"
+                            state="En pause"
+                            links={[
+                                {
+                                    name: 'GitHub',
+                                    href: 'https://github.com/nassimlnd/EcoCircuits'
+                                },
+                            ]}
+                            screenshots={
+                                [
+                                    '/ecocircuits_screenshots/screenshot1.png',
+                                    '/ecocircuits_screenshots/screenshot2.png',
+                                    '/ecocircuits_screenshots/screenshot3.png',
+                                ]
+                            }
+                    />
+                    <Card
+                            title="EcoCircuitsAPI"
+                            description="Une API Rest pour gérer les utilisateurs, les tournées, les clients et les produits pour le projet EcoCircuits."
+                            fullDescription={
+                                "EcoCircuitsAPI est une API Rest pour gérer les utilisateurs, les tournées, les clients et les produits pour le projet EcoCircuits. " +
+                                "Ce projet a été réaliser dans le cadre d'un stage volontaire dans le <span class='text-white font-semibold'>Laboratoire d'Informatique Fondamentale et Appliquée de Tours</span>. " +
+                                "<br/><br/>L'API a été développée à l'aide de <span class='font-semibold text-white'>Java</span>, <span class='font-semibold text-white'>Spring</span>, <span class='font-semibold text-white'>MySQL</span>, <span class='font-semibold text-white'>Hibernate</span>." +
+                                "<div class='border-b border-neutral-600 pb-2 mt-24'>" +
+                                "<h4 class='text-xl font-semibold text-white'>Endpoints</h4>" +
+                                "</div>" +
+                                "<div class='px-6 mt-6'>" +
+                                "<h4 class='text-white pb-2'>Utilisateurs</h4>" +
+                                "<ul class='list-disc list-inside px-2'>" +
+                                "<li>GET /users</li>" +
+                                "<li>GET /users/{id}</li>" +
+                                "<li>POST /users</li>" +
+                                "<li>PUT /users/{id}</li>" +
+                                "<li>DELETE /users/{id}</li>" +
+                                "</ul>" +
+                                "<h4 class='text-white pb-2 mt-6'>Tournées</h4>" +
+                                "<ul class='list-disc list-inside px-2'>" +
+                                "<li>GET /tournee</li>" +
+                                "<li>GET /tournee/{id}</li>" +
+                                "<li>POST /tournee</li>" +
+                                "<li>PUT /tournee/{id}</li>" +
+                                "<li>DELETE /tournee/{id}</li>" +
+                                "</ul>" +
+                                "<h4 class='text-white pb-2 mt-6'>Produits</h4>" +
+                                "<ul class='list-disc list-inside px-2'>" +
+                                "<li>GET /products</li>" +
+                                "<li>GET /products/{id}</li>" +
+                                "<li>POST /products</li>" +
+                                "<li>PUT /products/{id}</li>" +
+                                "<li>DELETE /products/{id}</li>" +
+                                "</ul>" +
+                                "<h4 class='text-white pb-2 mt-6'>Authentification</h4>" +
+                                "<ul class='list-disc list-inside px-2'>" +
+                                "<li>POST /auth/login</li>" +
+                                "<li>POST /auth/register</li>" +
+                                "</ul>" +
+                                "</div>"
+                            }
+                            tags={['Java', 'Spring', 'MySQL', 'Hibernate']}
+                            date="Mai 2023"
+                            state="En pause"
+                            links={
+                                [
+                                    {
+                                        name: 'GitHub',
+                                        href: 'https://github.com/nassimlnd/EcoCircuits-back'
+                                    }
+                                ]
+                            }
+                    />
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8 mt-8 lg:mt-16 lg:space-y-0">
+                    <Card
+                            title="2048Fx"
+                            description="Le jeu 2048 fait en Java et JavaFX"
+                            fullDescription={
+                                "Le jeu 2048 fait en Java et JavaFX. " +
+                                "Le projet a été réalisé dans le but d'apprendre à utiliser JavaFX. "
+                            }
+                            tags={['Java', 'JavaFX']}
+                            date="Novembre 2022"
+                            state="En pause"
+                            links={[
+                                {
+                                    name: 'GitHub',
+                                    href: 'https://github.com/nassimlnd/2048Fx'
+                                }
+                            ]}
+                            screenshots={
+                                [
+                                    '/2048fx_screenshots/screenshot1.png',
+                                    '/2048fx_screenshots/screenshot2.png',
+                                ]
+                            }
+                    />
+                    <Card
+                            title="Storage"
+                            description="Un logiciel de gestion de base de données"
+                            fullDescription={
+                                "Storage est un logiciel de gestion de base de données. " +
+                                "<br><br>Étant un utilisateur de Navicat depuis plusieurs années maintenant, j'ai connu la disparition du Navicat Lite qui était gratuit, au profit de solutions payantes (Navicat Premium). " +
+                                "J'ai continué à utiliser la version gratuite du logiciel Navicat Lite même s'il n'est plus maintenue. Mais arrivant rapidement au fait que même si le logiciel est toujours très fonctionnel. L'expérience utilisateur fait défaut." +
+                                "<br><br>Pour remédier à ce problème, j'ai d'abord décidé de parcourir le web à la recherche d'une alternative qui remplit les mêmes fonctions que Navicat Lite, mais avec une UX bien meilleure. Hélas, je n'ai pas trouvé de solutions gratuites/opensource qui répondait à mes besoins." +
+                                "<br><br>J'ai donc décidé de créer moi même un logiciel de gestion de base de données qui répond à mes besoins. Ce logiciel sera opensource et disponible sur GitHub. " +
+                                "<br><br>Le projet est actuellement en cours de conception. Il sera développé à l'aide de Electron, Vite, React, TypeScript et TailwindCSS."
+                            }
+                            tags={['Electron', 'Vite', 'React', 'TypeScript', 'TailwindCSS', '']}
+                            date="Fevrier 2024"
+                            state="En conception"
+                            links={[
+                            ]}
+                            screenshots={
+                                [
+                                ]
+                            }
+                    />
+                    <Card
+                            title="RefereeHub"
+                            description="Une application web pour la gestion des disponibilités et des désignations pour les arbitres de basketball."
+                            fullDescription={
+                                "Étant arbitre officiel de basketball depuis maintenant plus de 5 ans. Une des choses les plus pénible à la reprise des championnats après les trêves/vacances, était la gestion des disponibilités. " +
+                                "Actuellement, en tant qu'arbitre, nous devons envoyer un mail avec un fichier excel avec nos disponibilités à notre repartiteur pour lui indiquer nos disponibilités. " +
+                                "Le repartiteur doit ensuite faire les désignations en fonction des disponibilités de chacun. " +
+                                "<br><br>Le projet RefereeHub a pour but de faciliter la gestion des disponibilités et des désignations pour les arbitres de basketball. " +
+                                "Il est question de créer une application web autant utile pour nous (arbitres) que pour les répartiteurs. Le logiciel apportera une interface ergonomique et innovante afin de faciliter la saisie des disponiblités. " +
+                                "Mais il est aussi question de faciliter la repartition des arbitres sur les matchs facilement grâce à des algorithmes qui prendront en compte plusieurs paramètres et qui permettront de proposer des recommandations au repartiteur. " +
+                                "<br><br>Le projet est actuellement en cours de conception. Il reste la maquette graphique à finaliser et ensuite il sera développé à l'aide de Laravel, Inertia, React, Typescript, MySQL et TailwindCSS."
+                            }
+                            tags={['Laravel', 'Inertia', 'React', 'Typescript', 'PHP', 'MySQL', 'TailwindCSS']}
+                            date="Mars 2024"
+                            state="Non commencé"
+                            links={
                                 []
                             }
                     />
@@ -184,7 +383,7 @@ import {X} from "lucide-astro";
             <div class="h-screen px-6 lg:px-96 py-24 lg:py-48">
                 <h1 class="text-3xl font-bold">Me contacter</h1>
 
-                <form id="contact-form" method="post" >
+                <form id="contact-form" method="post">
                     <div class="mt-8">
                         <label for="name" class="block text-neutral-400">Nom</label>
                         <input type="text" id="name" name="name"
@@ -215,7 +414,10 @@ import {X} from "lucide-astro";
                         <h1 class="text-base lg:text-xl">⚠️ Demande de contact momentanément indisponible</h1>
                     </div>
                     <div class="px-6 py-6">
-                        <p class="text-sm text-neutral-300">Pour prendre contact veuillez m'envoyer un mail à cette adresse : <a href="mailto:nassimlnd37@gmail.com" class="text-indigo-500 hover:underline underline-offset-4">nassimlnd37@gmail.com</a></p>
+                        <p class="text-sm text-neutral-300">Pour prendre contact veuillez m'envoyer un mail à cette
+                            adresse : <a href="mailto:nassimlnd37@gmail.com"
+                                         class="text-indigo-500 hover:underline underline-offset-4">nassimlnd37@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
