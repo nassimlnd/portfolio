@@ -17,7 +17,7 @@ const {links, title, date, description, tags, state, fullDescription, screenshot
 
 <div id=`project-${title}`
      data-modalId=`project-${title}-modal`
-     class="w-full project bg-neutral-800 border border-neutral-600 rounded-md hover:bg-opacity-80 cursor-pointer"
+     class="w-full project bg-neutral-800 border border-neutral-600 rounded-md hover:bg-opacity-80 cursor-pointer flex flex-col"
 >
     <div class="border-b px-6 py-6 border-neutral-600 flex justify-between items-center">
         <div>
@@ -28,8 +28,8 @@ const {links, title, date, description, tags, state, fullDescription, screenshot
             <span class="text-sm text-neutral-500">{state}</span>
         </div>
     </div>
-    <div class="px-6 py-6 border-neutral-600">
-        <p class="text-neutral-400 mt-2">{description}</p>
+    <div class="px-6 py-6 border-neutral-600 flex-grow h-full">
+        <p class="text-neutral-400 mt-2 h-full">{description}</p>
     </div>
     <div class="flex items-end px-6 py-6 gap-2 text-neutral-500 w-full flex-wrap">
         {tags.map((tag) =>
