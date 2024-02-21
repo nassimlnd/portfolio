@@ -377,6 +377,36 @@ import {X} from "lucide-astro";
                             }
                     />
                 </div>
+                <div class="flex flex-col xl:flex-row gap-8 mt-8 xl:mt-16 xl:space-y-0">
+                    <Card
+                            title="FlixHub"
+                            description="Un clone de Netflix basée sur une API REST."
+                            fullDescription={
+                                "Pour un projet de programmation mobile pendant le semestre 6 de Licence Informatique. J'ai décidé mon camarade et moi de réaliser un clone de Netflix. " +
+                                "Le but étant surtout d'apprendre la programmation mobile, en l'occurence, le développement d'application native Android, il était à la base question de réaliser une application simple. " +
+                                "Amoureux du challenge, j'ai décidé de pousser le projet au bout et surtout au maximum des possibilités en 2 mois. " +
+                                "<br><br>Le projet FlixHub est un Netflix mais basée sur une API REST faites grâce au framework AdonisJS (v6). Le fonctionnement de l'API est relativement simple, elle base ses données sur une base de données remplie grâce à une playlist M3U. C'est l'API qui se charge de l'upload et de la prise en compte du fichier et des données qu'il contient. " +
+                                "L'API délivre également la possibilité de s'inscrire et de se connecter. L'authentification est basée sur un système de session (Session based authentication), qui sont stockés directement dans les cookies. Comme les applications Android native en Java, ne prenne pas en charge nativement les cookies. " +
+                                "J'ai alors implémenter un système qui enregistre les cookies dans le système de stockage natif d'une application Android (SharedPreferences). " +
+                                "<br><br>Le projet est actuellement en cours de développement."
+                            }
+                            tags={['AdonisJS', 'API REST', 'Java', 'Android', 'Typescript', 'MySQL']}
+                            date="Fevrier 2024"
+                            state="En cours"
+                            links={
+                                [
+                                    {
+                                        name: 'Github (front)',
+                                        href: 'https://github.com/nassimlnd/flixhub'
+                                    },
+                                    {
+                                        name: 'Github (back)',
+                                        href: 'https://github.com/nassimlnd/flixhub-back'
+                                    }
+                                ]
+                            }
+                    />
+                </div>
             </div>
         </section>
 
