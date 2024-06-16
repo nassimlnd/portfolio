@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 
 import rename from 'astro-rename';
 import HashRenamer from './src/lib/hash-renamer';
@@ -9,12 +9,12 @@ const renamer = new HashRenamer();
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-      tailwind(),
-      rename({
-          rename: {
-              strategy: (key) => renamer.rename(key),
-          }
-      })
-  ]
+    integrations: [
+        tailwind(),
+        rename({
+            rename: {
+                strategy: (key) => renamer.rename(key),
+            }
+        })
+    ],
 });
