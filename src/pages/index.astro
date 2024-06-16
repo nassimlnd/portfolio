@@ -6,13 +6,15 @@ import {Github} from "lucide-astro";
 import {File} from "lucide-astro";
 import {Menu} from "lucide-astro";
 import {X} from "lucide-astro";
+import Emoji from "../components/Emoji.astro"
 ---
 
 <Layout title="Nassim LOUNADI">
     <main>
         <section id="main" class="h-screen">
-            <section id="navbar" class="fixed top-0 w-full bg-neutral-900/50 backdrop-blur-2xl z-20">
-                <div class="w-full px-6 xl:px-96 py-6 border-b border-neutral-700 flex justify-between items-center">
+            <section id="navbar"
+                     class="fixed top-0 w-full bg-neutral-900/50 backdrop-blur-2xl z-20 border-b border-neutral-700">
+                <div class="w-full px-6 max-w-7xl mx-auto py-6  flex justify-between items-center">
                     <h4 class="text-xl">
                         <a href="#" class="font-bold text-neutral-100">Nassim LOUNADI</a>
                     </h4>
@@ -65,7 +67,7 @@ import {X} from "lucide-astro";
         </section>
 
         <section id="about-me">
-            <div class="h-screen px-6 xl:px-96 py-24 xl:py-48">
+            <div class="h-screen px-6 max-w-7xl py-24 mx-auto">
                 <h1 class="text-3xl font-bold">Qui suis-je ?</h1>
 
                 <div class="xl:flex items-center justify-between">
@@ -109,7 +111,7 @@ import {X} from "lucide-astro";
         </section>
 
         <section id="projects">
-            <div class="h-fit px-6 xl:px-96 py-24 xl:py-48">
+            <div class="h-fit px-6 max-w-7xl mx-auto py-24 xl:py-48">
                 <h1 class="text-3xl font-bold">Mes projets</h1>
 
                 <div class="flex flex-col xl:flex-row gap-8 mt-8 xl:mt-16 xl:space-y-0">
@@ -350,11 +352,9 @@ import {X} from "lucide-astro";
                             tags={['Laravel', 'NativePHP', 'PHP', 'TailwindCSS']}
                             date="Fevrier 2024"
                             state="En conception"
-                            links={[
-                            ]}
+                            links={[]}
                             screenshots={
-                                [
-                                ]
+                                []
                             }
                     />
                     <Card
@@ -448,7 +448,10 @@ import {X} from "lucide-astro";
             <div class="absolute flex items-center justify-center top-0 w-full h-full backdrop-blur-sm px-6">
                 <div class="h-fit bg-neutral-800 border border-neutral-600 rounded-md  flex flex-col">
                     <div class="border-b border-neutral-600 px-6 py-6">
-                        <h1 class="text-base lg:text-xl">⚠️ Demande de contact momentanément indisponible</h1>
+                        <h1 class="text-base lg:text-xl">
+                            <Emoji symbol="⚠️"/>
+                            Demande de contact momentanément indisponible
+                        </h1>
                     </div>
                     <div class="px-6 py-6">
                         <p class="text-sm text-neutral-300">Pour prendre contact veuillez m'envoyer un mail à cette
