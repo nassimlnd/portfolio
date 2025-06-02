@@ -17,4 +17,12 @@ export default defineConfig({
             }
         })
     ],
+    vite: {
+        server: {
+            allowedHosts: ['nassimlounadi.fr']
+        },
+        preview: {
+            allowedHosts: ['nassimlounadi.fr']
+        }
+    },
 });
